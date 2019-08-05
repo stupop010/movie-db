@@ -123,7 +123,6 @@ a {
   height: 350px;
   width: 250px;
   margin: 1em;
-  box-shadow: 2px 2px 5px 1px rgba(12, 11, 11, 0.75);
   .poster-content {
     position: relative;
     height: 100%;
@@ -496,3 +495,25 @@ a {
   width: 100%;
   margin-bottom: 5em;
 }
+
+@media only screen and (max-width: 1200px) {
+  .results-container #results {
+    width: 100%;
+  }
+  .section-title {
+    width: 100%;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .movie-info {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+// @media only screen and (max-width: 900) {
+//   .movie-poster {
+//     display: none;
+//   }
+// }
