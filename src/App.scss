@@ -1,0 +1,498 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  background: black;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:visited {
+    color: inherit;
+  }
+}
+.app {
+  height: 100%;
+}
+// Navbar
+.navbar {
+  position: fixed;
+  color: white;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1em 0;
+  z-index: 10;
+  div {
+    width: 50%;
+    position: relative;
+    font-size: 1.5em;
+    padding: 0 1em;
+  }
+  #left {
+    span {
+      float: right;
+    }
+  }
+}
+
+#fixed {
+  background: black !important;
+  box-shadow: 2px 5px 5px 1px rgba(12, 11, 11, 0.75);
+}
+
+// Home page
+.container {
+  height: 700px;
+}
+
+#hero {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .hero-container {
+    height: 50%;
+    width: 80%;
+    color: rgba(233, 230, 230, 0.85);
+    margin: auto;
+    padding-top: 18%;
+  }
+  .hero-content {
+    width: 70%;
+    h1 {
+      font-size: 3.7em;
+    }
+    p {
+      width: 30em;
+      line-height: 1.4;
+      font-size: 1.2em;
+    }
+    .hero-button {
+      cursor: pointer;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      text-transform: uppercase;
+      margin-top: 1.5em;
+      color: rgba(233, 230, 230, 0.85);
+      font-size: 1.3em;
+      background: rgba(245, 70, 70, 0.75);
+      border: none;
+      span {
+        margin-right: 0.5em;
+      }
+      &:hover {
+        background: rgba(245, 70, 70, 1);
+      }
+    }
+  }
+}
+
+.black {
+  background: black;
+}
+
+.section-title {
+  margin: 0 auto;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  width: 80%;
+}
+.results-container {
+  color: white;
+  #results {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+.poster-m {
+  margin: 1em 0.3em !important;
+}
+
+.poster {
+  height: 350px;
+  width: 250px;
+  margin: 1em;
+  box-shadow: 2px 2px 5px 1px rgba(12, 11, 11, 0.75);
+  .poster-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.3s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .info {
+      position: absolute;
+      bottom: 0;
+      padding: 50% 1em 1em;
+      height: auto;
+      width: 90%;
+      color: white;
+      .title {
+        font-size: 1.7em;
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-bottom: 0.6em;
+      }
+      .release-date {
+        opacity: 0.7;
+        font-size: 1em;
+        margin: 0 0 0.6em 0;
+      }
+      .vote {
+        margin-left: 0.4em;
+        font-weight: 400;
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+.tv-container {
+  height: 20em;
+  color: white;
+}
+
+.footer-container {
+  height: 3rem;
+  padding: 2rem;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+// Movie page
+
+.movie-hero {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.info-container {
+  margin: -100px auto 0 auto;
+  width: 60%;
+  color: white;
+  // display: flex;
+}
+.content {
+  display: flex;
+  // flex-direction: column;
+}
+.movie-poster {
+  margin-top: -250px;
+  height: 400px;
+  width: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.info-container {
+  width: 80%;
+  margin: -160px auto 2em auto;
+}
+.movie-info {
+  margin: -160px auto 2em 50px;
+  width: 70%;
+  .title {
+    margin-bottom: 0.2em;
+    font-size: 3em;
+    text-transform: uppercase;
+  }
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0 1em;
+    li {
+      margin-right: 2em;
+      opacity: 0.5;
+    }
+  }
+  .vote {
+    font-size: 1em;
+    .fs-2 {
+      font-size: 1.5em;
+      margin-right: 0.1em;
+    }
+    .vote-count {
+      margin-left: 1em;
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+    .genres-info {
+      list-style: none;
+      padding: 0;
+      li {
+        opacity: 1;
+        background: rgba(97, 27, 91, 0.8);
+        padding: 0.3em;
+        margin-right: 0.5em;
+        border-radius: 5px;
+      }
+    }
+    .movie-overview {
+      margin: 2.5em 0 2em 0;
+      font-size: 1.3em;
+      opacity: 0.7;
+      line-height: 1.2em;
+    }
+  }
+  .trailer-button {
+    padding: 0.6em;
+    width: 7em;
+    color: white;
+    font-size: 1em;
+    background: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-bottom: 5em;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.movie-cast {
+  border-top: 1px solid rgba(141, 139, 139, 0.8);
+  margin-bottom: 5em;
+  h1 {
+    font-size: 3em;
+    text-transform: capitalize;
+  }
+  .flex {
+    display: flex;
+    flex-wrap: wrap;
+    .person-container {
+      width: 40%;
+      margin: 1.5em 3em 0 0;
+      .person-img {
+        height: 6.2em;
+        width: 73px;
+        border-radius: 10px;
+      }
+
+      .person-info {
+        margin-left: 1em;
+        p {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  .person-button {
+    margin: 3em 0 0 0;
+    font-size: 0.8em;
+    padding: 1em;
+    border-radius: 3px;
+    background: blue;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Movie Reviews
+.reviews-container {
+  border-top: 1px solid rgba(141, 139, 139, 0.8);
+  margin-bottom: 5em;
+  h1 {
+    font-size: 3em;
+  }
+  div {
+    h3 {
+      font-size: 1.5em;
+      span {
+        font-size: 0.7em;
+        margin-left: 1em;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.review-text {
+  font-size: 1.1em;
+  opacity: 0.7;
+  line-height: 1.7;
+  .read-more {
+    cursor: pointer;
+    background: none;
+    color: red;
+    border: none;
+    font-size: 1em;
+  }
+}
+
+.poster-container {
+  border-top: 1px solid grey;
+  margin-bottom: 5em;
+  h1 {
+    font-size: 3em;
+  }
+  .posters {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .poster-width {
+      width: 25%;
+      .poster {
+        margin: 0.5em 0;
+        height: 237px;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  .poster-button {
+    font-size: 0.8em;
+    padding: 1em;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    background: blue;
+    text-transform: uppercase;
+    margin-top: 2em;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.similar-container {
+  border-top: 1px solid grey;
+  margin-bottom: 5em;
+  h1 {
+    font-size: 3em;
+  }
+  .similar-flex {
+    display: flex;
+    flex-wrap: wrap;
+    .similar {
+      width: 25%;
+      height: 10em;
+      .similar-poster {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.movie-button {
+  font-size: 0.8em;
+  padding: 1em;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  background: blue;
+  text-transform: uppercase;
+  margin-top: 2em;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.seasons-container {
+  border-top: 1px solid grey;
+  color: white;
+  margin-bottom: 5em;
+  .seasons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    .season {
+      width: 50%;
+      height: 10em;
+      margin: 1em 0;
+      .seasons-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .seasons-poster {
+          width: 30%;
+          height: 100%;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .seasons-info {
+          margin-left: 1em;
+          h3 {
+            font-size: 1.7em;
+            margin: 0.3em 0;
+          }
+          h4 {
+            opacity: 0.4;
+          }
+          p {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
+
+.episodes-container {
+  border-top: 1px solid grey;
+  margin-bottom: 5em;
+  h1 {
+    font-size: 3em;
+  }
+  .epi-result {
+    width: 100%;
+    height: 10em;
+    display: flex;
+  }
+  .epi-poster {
+    height: 10em;
+    width: 15em;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .backup {
+    height: 9em;
+    width: 15em;
+    background: rgba(32, 30, 30, 0.75);
+  }
+  .epi-info {
+    margin-left: 1em;
+    width: 30em;
+    h3 {
+      margin-top: 0.5em;
+    }
+    p {
+      font-size: 0.9em;
+      opacity: 0.6;
+    }
+  }
+}
+
+// Person
+.person-title {
+  opacity: 0.7;
+  line-height: 1.2;
+  font-size: 1.2em;
+}
+
+.person-data {
+  width: 100%;
+  margin-bottom: 5em;
+}
