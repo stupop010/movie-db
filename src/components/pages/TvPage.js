@@ -28,7 +28,7 @@ const TvPage = ({ match }) => {
     fetchTvCast(id);
     fetchTvRecommend(id);
     // eslint-disable-next-line
-  }, []);
+  }, [match.params.id]);
 
   return (
     <div className="container">

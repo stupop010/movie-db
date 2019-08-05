@@ -512,8 +512,23 @@ a {
   }
 }
 
-// @media only screen and (max-width: 900) {
-//   .movie-poster {
-//     display: none;
-//   }
-// }
+@media only screen and (max-width: 900px) {
+  #hero .hero-container {
+    padding: 10em 1em 0 0;
+    width: 100%;
+  }
+  #hero .hero-content {
+    width: 100%;
+  }
+  #hero .hero-content p {
+    width: 100%;
+  }
+  .poster {
+    height: 250px;
+    width: 150px;
+    margin: 0.4em;
+  }
+  .poster .poster-content .info .title {
+    font-size: 1em;
+  }
+}

@@ -36,7 +36,7 @@ const MoviePage = ({ match }) => {
     fetchMoviePosters(id);
     fetchSimilarMovies(id);
     // eslint-disable-next-line
-  }, []);
+  }, [match.params.id]);
 
   return (
     <div className="container">

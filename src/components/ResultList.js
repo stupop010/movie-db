@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { withRouter } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,8 +17,8 @@ const ResultList = ({
   classname
 }) => {
   return (
-    <a
-      href={`/${link.toLowerCase()}/${id}`}
+    <Link
+      to={`/${link.toLowerCase()}/${id}`}
       className={classname ? classname : "poster"}
     >
       <div
@@ -41,7 +43,7 @@ const ResultList = ({
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 
