@@ -1,10 +1,11 @@
-import { LOADING } from "../types";
+import { FETCH_SEARCH } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
-    case LOADING:
+    case FETCH_SEARCH:
       return {
-        loading: true
+        ...state,
+        results: action.payload
       };
     default:
       return {

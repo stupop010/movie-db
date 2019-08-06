@@ -286,6 +286,7 @@ a {
 
       .person-info {
         margin-left: 1em;
+        font-size: 80%;
         p {
           opacity: 0.7;
         }
@@ -350,7 +351,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     .poster-width {
-      width: 25%;
+      width: 150px;
+      margin: 0 1em;
       .poster {
         margin: 0.5em 0;
         height: 237px;
@@ -531,4 +533,29 @@ a {
   .poster .poster-content .info .title {
     font-size: 1em;
   }
+  .movie-cast .flex .person-container {
+    width: 100%;
+  }
+}
+
+// Search
+.search-container {
+  width: 80%;
+  margin: 250px auto 0 auto;
+  color: white;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(66, 64, 64, 0.4);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 2em;
+  padding: 0.5em 0.5em;
+  margin-top: 0.5em;
+}
+.label {
+  font-size: 3em;
+  font-weight: bolder;
 }
