@@ -26,7 +26,6 @@ const HomePage = () => {
           <div className="black">
             <Cinemas whatsOn={nowPlaying} />
             <Tv tvListing={tvListing} />
-            <Footer />
           </div>
         </div>
       ) : null}

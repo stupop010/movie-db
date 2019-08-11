@@ -27,3 +27,4 @@ export const FETCH_PERSON_CREDITS = "FETCH_PERSON_CREDITS";
 
 // Search types
 export const FETCH_SEARCH = "FETCH_SEARCH";
+export const CLEAR_SEARCH = "CLEAR_SEARCH";

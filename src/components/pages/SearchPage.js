@@ -1,41 +1,39 @@
 import React, { useEffect, useState, useContext } from "react";
 import SearchContext from "../../context/search/searchContext";
 import history from "../../history";
+import SearchResult from "../SearchResult";
 
-import SearchForm from "../SearchForm";
-
-const SearchPage = props => {
+const SearchPage = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [value, setValue] = useState("");
   const searchContext = useContext(SearchContext);
-  const { fetchSearch, results } = searchContext;
+  const { fetchSearch, clearSearch, results } = searchContext;
 
-  console.log(results);
+  useEffect(() => {
+    if (window.location.search) {
+      const va = window.location.search.split("=")[1].split("&")[0];
+      const page = window.location.search.split("=")[2];
+      if (value && page) {
+        fetchSearch(va, Number(page));
+      }
+    } else {
+      clearSearch();
+    }
+    // eslint-disable-next-line
+  }, [window.location.search]);
 
   const onChange = e => {
-    let id;
-    if (id) {
-      window.clearTimeout(id);
-    }
     const val = e.target.value;
-    setValue(e.target.value);
-    id = window.setTimeout(() => {
-      if (val) {
-        history.push(`/search?query=${val}&page=1`);
-        fetchSearch(`query=${val}&page=1`);
-      }
-    }, 800);
+    setValue(val);
+    if (val) {
+      history.push(`/search?query=${val}&page=1`);
+      setPageNumber(1);
+    }
   };
 
   const onClick = () => {
     setPageNumber(pageNumber + 1);
-    console.log("click");
-    console.log(value);
-    if (value) {
-      history.push(`/search?query=${value}&page=${pageNumber + 1}`);
-    }
-    // setPageNumber(PageNumber + 1);
-    // console.log(history.location);
+    history.push(`/search?query=${value}&page=${pageNumber + 1}`);
   };
 
   const onSubmit = e => {
@@ -44,7 +42,6 @@ const SearchPage = props => {
 
   return (
     <div className="search-container">
-      {/* <SearchForm onChange={onChange} onSubmit={onSubmit}  /> */}
       <div>
         <form>
           <label className="label">Search</label>
@@ -54,6 +51,7 @@ const SearchPage = props => {
             onSubmit={onSubmit}
           />
         </form>
+        <SearchResult data={results} />
         <button onClick={onClick}>fdjhbgksjlkd</button>
       </div>
     </div>

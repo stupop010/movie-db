@@ -1,4 +1,4 @@
-import { FETCH_SEARCH } from "../types";
+import { FETCH_SEARCH, CLEAR_SEARCH } from "../types";
 
 export default (state, action) => {
   switch (action.type) {
@@ -6,6 +6,11 @@ export default (state, action) => {
       return {
         ...state,
         results: action.payload
+      };
+    case CLEAR_SEARCH:
+      return {
+        ...state,
+        results: {}
       };
     default:
       return {

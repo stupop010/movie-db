@@ -42,6 +42,7 @@ const MoviesState = props => {
   const fetchMovie = async ({ id }) => {
     setLoading();
     const res = await axios.get(`${baseURL + id + ApiString}`);
+    console.log(res);
     dispatch({ type: FETCH_MOVIE, payload: res.data });
   };
 

@@ -1,21 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
+import Route from "./route";
 import MoviesState from "./context/movies/moviesState";
 import TvState from "./context/tv/tvState";
 import SeasonsState from "./context/seasons/seasonsState";
 import PersonState from "./context/person/personState";
 import SearchState from "./context/search/searchState";
 
-import HomePage from "./components/pages/HomePage";
-import MoviePage from "./components/pages/MoviePage";
-import TvPage from "./components/pages/TvPage";
-import SeasonsPage from "./components/pages/SeasonsPage";
-import PersonPage from "./components/pages/PersonPage";
-import SearchPage from "./components/pages/SearchPage";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import "./App.scss";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -26,19 +23,13 @@ function App() {
             <SearchState>
               <div className="App">
                 <Router>
-                  <Navbar />
-                  <Switch>
-                    <Route exact path="/" component={HomePage} />
-                    <Route exact path="/movie/:id" component={MoviePage} />
-                    <Route exact path="/tv/:id" component={TvPage} />
-                    <Route
-                      exact
-                      path="/season/:id/:seasonNumber"
-                      component={SeasonsPage}
-                    />
-                    <Route exact path="/person/:id" component={PersonPage} />
-                    <Route path="/search" component={SearchPage} />
-                  </Switch>
+                  <ScrollToTop>
+                    <Navbar />
+                    <div style={{ height: "100%" }}>
+                      <Route />
+                    </div>
+                    <Footer />
+                  </ScrollToTop>
                 </Router>
               </div>
             </SearchState>
