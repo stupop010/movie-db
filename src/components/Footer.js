@@ -5,7 +5,13 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-content">
-        <a href="www.stuart-doney.com">Stuart Doney &copy; 2019</a>
+        <a
+          href="https://www.stuart-doney.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Stuart Doney &copy; 2019
+        </a>
         <div className="powered-by">
           <a
             href="https://themoviedb.org"
