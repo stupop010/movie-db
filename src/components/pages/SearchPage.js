@@ -31,9 +31,14 @@ const SearchPage = () => {
     }
   };
 
-  const onClick = () => {
+  const onClickForward = () => {
     setPageNumber(pageNumber + 1);
     history.push(`/search?query=${value}&page=${pageNumber + 1}`);
+  };
+
+  const onClickPrevious = () => {
+    setPageNumber(pageNumber - 1);
+    history.push(`/search?query=${value}&page=${pageNumber - 1}`);
   };
 
   const onSubmit = e => {
@@ -51,8 +56,11 @@ const SearchPage = () => {
             onSubmit={onSubmit}
           />
         </form>
-        <SearchResult data={results} />
-        <button onClick={onClick}>fdjhbgksjlkd</button>
+        <SearchResult
+          data={results}
+          onClickForward={onClickForward}
+          onClickPrevious={onClickPrevious}
+        />
       </div>
     </div>
   );

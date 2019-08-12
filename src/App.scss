@@ -168,9 +168,20 @@ a {
 .footer-container {
   height: 3rem;
   padding: 2rem;
-  text-align: center;
+  // text-align: center;
   background: black;
   color: white;
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  .powered-by {
+    width: 100px;
+    height: 50px;
+    .logo {
+      height: 100%;
+    }
+  }
 }
 
 // Movie page
@@ -544,6 +555,33 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  .sr-buttons {
+    width: 100%;
+    position: relative;
+    padding: 2em 0;
+    margin-bottom: 3em;
+    .sr-button {
+      padding: 1em;
+      border-radius: 5px;
+      background: rgba(42, 45, 241, 0.75);
+      border: none;
+      color: white;
+      font-size: 0.9em;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .previous {
+      position: absolute;
+      left: 2em;
+    }
+    .next {
+      position: absolute;
+      right: 2em;
+    }
+  }
 }
 
 .light-grey {

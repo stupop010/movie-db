@@ -37,7 +37,7 @@ const MoviePage = ({ match }) => {
     fetchSimilarMovies(id);
     // eslint-disable-next-line
   }, [match.params.id]);
-  console.log(movie);
+  
   return (
     <div className="container">
       <MovieHero hero={movie} />

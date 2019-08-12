@@ -14,7 +14,7 @@ const SearchState = props => {
   };
 
   const [state, dispatch] = useReducer(SearchReducer, initialState);
-  // fetchSearch(`query=${val}&page=1`);
+
   const fetchSearch = async (val, pageNumber) => {
     const res = await axios.get(
       `${SearchURL + APIKey}&query=${val}&page=${pageNumber}`

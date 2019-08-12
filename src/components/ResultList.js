@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
@@ -60,6 +59,3 @@ const ResultList = ({
 };
 
 export default ResultList;
-
-///ipPiP5YeYpHVdgFZ1jdgZLcvI47.jpg
-// https://image.tmdb.org/t/p/w500/ipPiP5YeYpHVdgFZ1jdgZLcvI47.jpg

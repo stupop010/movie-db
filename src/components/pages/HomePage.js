@@ -1,7 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import MoviesContext from "../../context/movies/moviesContext";
 import TvContext from "../../context/tv/tvContext";
-import Footer from "../Footer";
 import HomeHero from "../HomeHero";
 import Cinemas from "../Cinemas";
 import Tv from "../Tv";

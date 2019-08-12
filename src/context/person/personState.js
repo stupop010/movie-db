@@ -8,7 +8,6 @@ import {
   FETCH_PERSON_PHOTOS,
   FETCH_PERSON_CREDITS
 } from "../types";
-import { async } from "q";
 
 const PersonURL = "https://api.themoviedb.org/3/person/";
 const APIKey = "?api_key=0729def3e1c06a786ecc57e5d3d9a5ac";
