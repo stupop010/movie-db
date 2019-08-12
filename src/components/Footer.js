@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer-container">
       <div className="footer-content">
         <a
-          href="https://www.stuart-doney.com"
+          href="https://www.stuartdoney.com"
           target="_blank"
           rel="noopener noreferrer"
         >
