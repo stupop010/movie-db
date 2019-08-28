@@ -18,3 +18,7 @@ A pet project to learn and understand react and react context api. This app was 
 npm install
 npm run start
 ```
+
+## Live demo
+
+https://movies-db.netlify.com/
